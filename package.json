@@ -1,0 +1,22 @@
+{
+  "name": "imobso",
+  "version": "1.0.0",
+  "description": "Is My Open Bazaar Server Online?",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/insanity54/imobso.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/insanity54/imobso/issues"
+  },
+  "homepage": "https://github.com/insanity54/imobso#readme",
+  "dependencies": {
+    "request": "^2.72.0"
+  }
+}
