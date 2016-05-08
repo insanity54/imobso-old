@@ -1,0 +1,18 @@
+---
+
+- hosts: imobso
+  remote_user: root
+  roles:
+    - bootstrap
+    - openbazaar
+  vars_files:
+    - vars/secret.yml
+  vars:
+    openbazaar_git_url: https://github.com/OpenBazaar/OpenBazaar-Server.git
+    openbazaar_git_version: 11b492ef1f397d2d465506be2cfc1d812e98a2d0
+    openbazaar_username: "{{ vault_openbazaar_username }}"
+    openbazaar_password: "{{ vault_openbazaar_password }}"
+    openbazaar_allowed_ip: "{{ vault_openbazaar_allowed_ip }}"
+    openbazaar_additional_flags: ""
+        
+    
