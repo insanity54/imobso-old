@@ -2,7 +2,7 @@
 Is My Open Bazaar Server Online?
 
 
-A public web service with REST API to check whether or not your openbazaar store is online.
+A public web service with REST API to check whether or not your openbazaar store is online. *In development*
 
 ## Example use cases
 
