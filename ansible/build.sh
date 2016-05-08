@@ -1,3 +1,3 @@
 #!/bin/bash
 
-ansible-galaxy install -r requirements.yml --roles-path ./roles
+ansible-galaxy install -f -r requirements.yml --roles-path ./roles
