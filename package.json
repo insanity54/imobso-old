@@ -18,6 +18,10 @@
   "homepage": "https://github.com/insanity54/imobso#readme",
   "dependencies": {
     "foreman": "^1.4.1",
-    "request": "^2.72.0"
+    "request": "^2.72.0",
+    "tough-cookie-filestore": "0.0.1"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0"
   }
 }
