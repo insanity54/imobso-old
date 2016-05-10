@@ -4,7 +4,8 @@
   "description": "Is My Open Bazaar Server Online?",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "nf run mocha",
+    "start": "nf start"
   },
   "repository": {
     "type": "git",
@@ -17,11 +18,14 @@
   },
   "homepage": "https://github.com/insanity54/imobso#readme",
   "dependencies": {
+    "body-parser": "^1.15.1",
+    "express": "^4.13.4",
     "foreman": "^1.4.1",
     "request": "^2.72.0",
     "tough-cookie-filestore": "0.0.1"
   },
   "devDependencies": {
-    "chai": "^3.5.0"
+    "chai": "^3.5.0",
+    "supertest": "^1.2.0"
   }
 }
