@@ -4,15 +4,30 @@
   remote_user: root
   roles:
     - bootstrap
+    - nginx
     - openbazaar
   vars_files:
     - vars/secret.yml
   vars:
+    nginx_upstreams:
+      - name: app_servers
+        server: 127.0.0.1:5000
+    nginx_sites:
+      - server:
+        file_name: imobso
+        listen: 80
+        server_name: imobso
+        location1:
+          name: /
+          proxy_pass: "http://app_servers" # https://github.com/bennojoy/nginx/issues/4
+          proxy_redirect: 'off'
+          proxy_set_header: 'Host $host'
+          proxy_set_header: 'X-Real-IP $remote_addr'
+          proxy_set_header: 'X-Forwarded-For $proxy_add_x_forwarded_for'
+        #location2: {name: /images/, try_files: "$uri $uri/ /index.html"}
     openbazaar_git_url: https://github.com/OpenBazaar/OpenBazaar-Server.git
     openbazaar_git_version: 11b492ef1f397d2d465506be2cfc1d812e98a2d0
     openbazaar_username: "{{ vault_openbazaar_username }}"
     openbazaar_password: "{{ vault_openbazaar_password }}"
     openbazaar_allowed_ip: "{{ vault_openbazaar_allowed_ip }}"
     openbazaar_additional_flags: ""
-        
-    
