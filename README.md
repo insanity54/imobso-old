@@ -1,4 +1,7 @@
 # imobso
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/insanity54/imobso-old.svg)](https://greenkeeper.io/)
+
 Is My Open Bazaar Server Online?
 
 
